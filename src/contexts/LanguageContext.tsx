@@ -1,0 +1,128 @@
+import React, { createContext, useContext, useState } from 'react';
+
+type Language = 'en' | 'es';
+
+interface LanguageContextType {
+  language: Language;
+  setLanguage: (lang: Language) => void;
+  t: (key: string) => string;
+}
+
+const translations = {
+  en: {
+    // Hero
+    heroTitle: "We fix bad marketing. For free.",
+    heroSubtitle: "We help small businesses look sharp, sound clear, and stand out — no fees, no nonsense.",
+    ctaButton: "Request help",
+    
+    // Why Free
+    whyFreeTitle: "Why Free?",
+    whyFreeText: "We're not selling kindness. We just believe bad marketing kills good businesses — and we can't watch that happen. So we help. No contracts, no catch. If it helped, some people choose to thank us later — that's optional.",
+    
+    // What We Do
+    whatWeDoTitle: "What we do",
+    service1: "Strategy & Positioning",
+    service2: "Social Media Cleanup",
+    service3: "Website Touch-Up",
+    service4: "Brand Messaging",
+    
+    // How It Works
+    howItWorksTitle: "How it works",
+    step1: "You ask for help",
+    step2: "We review your brand",
+    step3: "We tell you what to fix",
+    step4: "You take it from there",
+    
+    // Form
+    formTitle: "Request Help",
+    businessName: "Business name",
+    contactPerson: "Contact person",
+    contactEmail: "Contact email",
+    website: "Website (if any)",
+    helpNeeded: "What do you need help with?",
+    gdprNote: "We use your data only to process your request. No newsletters, no spam.",
+    formNote: "No fees. No spam. Limited slots per week.",
+    submitButton: "Send",
+    successMessage: "Thanks! We'll review your request soon.",
+    
+    // Disclaimer
+    disclaimerTitle: "Important",
+    disclaimerText: "Submitting a request does not guarantee assistance. Each case is reviewed individually, and priority is given to projects where our work can have the greatest impact. If our schedule is full, we'll contact you when a slot opens.",
+    
+    // Footer
+    footerText: "Made with blunt honesty by Bad Good Better Agency",
+    footerLocation: "Tenerife → Maasland",
+    footerTagline: "No clients. Just causes.",
+    contactLabel: "Contact:",
+  },
+  es: {
+    // Hero
+    heroTitle: "Arreglamos el mal marketing. Gratis.",
+    heroSubtitle: "Ayudamos a pequeños negocios a verse bien, sonar claros y destacar — sin costes, sin rodeos.",
+    ctaButton: "Pedir ayuda",
+    
+    // Why Free
+    whyFreeTitle: "¿Por qué gratis?",
+    whyFreeText: "No vendemos bondad. Creemos que el mal marketing arruina buenos negocios — y no pensamos quedarnos mirando. Por eso ayudamos. Sin contratos, sin letra pequeña. Si te ha servido, hay quien después decide agradecérnoslo — totalmente opcional.",
+    
+    // What We Do
+    whatWeDoTitle: "Qué hacemos",
+    service1: "Estrategia y posicionamiento",
+    service2: "Limpieza de redes sociales",
+    service3: "Puesta a punto web",
+    service4: "Mensaje de marca",
+    
+    // How It Works
+    howItWorksTitle: "Cómo funciona",
+    step1: "Pides ayuda",
+    step2: "Revisamos tu marca",
+    step3: "Te decimos qué mejorar",
+    step4: "A partir de ahí, decides tú",
+    
+    // Form
+    formTitle: "Formulario",
+    businessName: "Nombre del negocio",
+    contactPerson: "Persona de contacto",
+    contactEmail: "Correo electrónico",
+    website: "Página web (si la hay)",
+    helpNeeded: "¿En qué necesitas ayuda?",
+    gdprNote: "Usamos tus datos únicamente para gestionar tu solicitud. Sin boletines ni spam.",
+    formNote: "Sin costes. Sin spam. Plazas limitadas por semana.",
+    submitButton: "Enviar",
+    successMessage: "¡Gracias! Revisaremos tu solicitud en breve.",
+    
+    // Disclaimer
+    disclaimerTitle: "Importante",
+    disclaimerText: "Enviar una solicitud no garantiza que podamos ofrecer ayuda. Revisamos cada caso de forma individual y priorizamos aquellos en los que nuestro trabajo pueda generar mayor impacto. Si nuestra agenda está completa, te contactaremos cuando se libere una plaza.",
+    
+    // Footer
+    footerText: "Hecho con honestidad directa por Bad Good Better Agency",
+    footerLocation: "Tenerife → Maasland",
+    footerTagline: "Sin clientes. Solo causas.",
+    contactLabel: "Contacto:",
+  },
+};
+
+const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+
+export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [language, setLanguage] = useState<Language>('en');
+
+  const t = (key: string): string => {
+    return translations[language][key as keyof typeof translations.en] || key;
+  };
+
+  return (
+    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+      {children}
+    </LanguageContext.Provider>
+  );
+};
+
+export const useLanguage = () => {
+  const context = useContext(LanguageContext);
+  if (!context) {
+    throw new Error('useLanguage must be used within a LanguageProvider');
+  }
+  return context;
+};
