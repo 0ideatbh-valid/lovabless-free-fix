@@ -21,7 +21,7 @@ export const WhatWeDo = () => {
           {services.map((service) => (
             <div 
               key={service.key}
-              className="text-center p-6 rounded-2xl hover:bg-secondary transition-colors"
+              className="text-center p-6 rounded-2xl hover:bg-secondary hover:scale-105 hover:shadow-lg transition-all duration-300"
             >
               <p className="text-lg font-medium text-foreground">
                 {t(service.key)}

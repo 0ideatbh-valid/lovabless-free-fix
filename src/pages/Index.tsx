@@ -3,6 +3,7 @@ import { Hero } from "@/components/Hero";
 import { WhyFree } from "@/components/WhyFree";
 import { WhatWeDo } from "@/components/WhatWeDo";
 import { HowItWorks } from "@/components/HowItWorks";
+import { LinkedInPanel } from "@/components/LinkedInPanel";
 import { ContactForm } from "@/components/ContactForm";
 import { Disclaimer } from "@/components/Disclaimer";
 import { Footer } from "@/components/Footer";
@@ -16,6 +17,7 @@ const Index = () => {
       <WhyFree />
       <WhatWeDo />
       <HowItWorks />
+      <LinkedInPanel />
       <ContactForm />
       <Disclaimer />
       <Footer />

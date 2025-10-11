@@ -11,9 +11,10 @@ interface LanguageContextType {
 const translations = {
   en: {
     // Hero
-    heroTitle: "We fix bad marketing. For free.",
-    heroSubtitle: "We help small businesses look sharp, sound clear, and stand out — no fees, no nonsense.",
+    heroTitle: "Make your brand unmissable.",
+    heroSubtitle: "Strategy. Positioning. Cleanup. Free.",
     ctaButton: "Request help",
+    ctaBadge: "No contracts • No fees",
     
     // Why Free
     whyFreeTitle: "Why Free?",
@@ -49,6 +50,11 @@ const translations = {
     disclaimerTitle: "Important",
     disclaimerText: "Submitting a request does not guarantee assistance. Each case is reviewed individually, and priority is given to projects where our work can have the greatest impact. If our schedule is full, we'll contact you when a slot opens.",
     
+    // LinkedIn Panel
+    linkedInTitle: "Live: See what we're up to →",
+    linkedInButton: "Follow on LinkedIn",
+    linkedInSubtext: "Follow updates and insights on LinkedIn.",
+    
     // Footer
     footerText: "Made with blunt honesty by Bad Good Better Agency",
     footerLocation: "Tenerife → Maasland",
@@ -57,9 +63,10 @@ const translations = {
   },
   es: {
     // Hero
-    heroTitle: "Arreglamos el mal marketing. Gratis.",
-    heroSubtitle: "Ayudamos a pequeños negocios a verse bien, sonar claros y destacar — sin costes, sin rodeos.",
+    heroTitle: "Que tu marca no pase desapercibida.",
+    heroSubtitle: "Estrategia, posicionamiento y limpieza. Gratis.",
     ctaButton: "Pedir ayuda",
+    ctaBadge: "Sin contratos • Sin costes",
     
     // Why Free
     whyFreeTitle: "¿Por qué gratis?",
@@ -94,6 +101,11 @@ const translations = {
     // Disclaimer
     disclaimerTitle: "Importante",
     disclaimerText: "Enviar una solicitud no garantiza que podamos ofrecer ayuda. Revisamos cada caso de forma individual y priorizamos aquellos en los que nuestro trabajo pueda generar mayor impacto. Si nuestra agenda está completa, te contactaremos cuando se libere una plaza.",
+    
+    // LinkedIn Panel
+    linkedInTitle: "Ahora: lo que estamos haciendo →",
+    linkedInButton: "Seguir en LinkedIn",
+    linkedInSubtext: "Sigue las novedades y proyectos en LinkedIn.",
     
     // Footer
     footerText: "Hecho con honestidad directa por Bad Good Better Agency",

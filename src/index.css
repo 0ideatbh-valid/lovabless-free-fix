@@ -54,6 +54,10 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+  }
+  
+  .font-pirata {
+    font-family: 'Pirata One', cursive;
   }
 }

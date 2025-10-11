@@ -1,8 +1,9 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Button } from "./ui/button";
+import { Badge } from "./ui/badge";
 
 export const Hero = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const scrollToForm = () => {
     document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' });
@@ -13,7 +14,7 @@ export const Hero = () => {
       {/* Animated Circles - Bad, Good, Better */}
       <div className="absolute inset-0 pointer-events-none">
         <div 
-          className="absolute w-64 h-64 rounded-full opacity-20 animate-float"
+          className="absolute w-64 h-64 rounded-full opacity-20 animate-float-scale"
           style={{ 
             background: 'hsl(var(--bgb-red))',
             top: '10%',
@@ -22,7 +23,7 @@ export const Hero = () => {
           }}
         />
         <div 
-          className="absolute w-80 h-80 rounded-full opacity-20 animate-float-delayed"
+          className="absolute w-80 h-80 rounded-full opacity-20 animate-float-scale"
           style={{ 
             background: 'hsl(var(--bgb-blue))',
             top: '40%',
@@ -32,7 +33,7 @@ export const Hero = () => {
           }}
         />
         <div 
-          className="absolute w-72 h-72 rounded-full opacity-20 animate-float"
+          className="absolute w-72 h-72 rounded-full opacity-20 animate-float-scale"
           style={{ 
             background: 'hsl(var(--bgb-green))',
             bottom: '15%',
@@ -47,18 +48,33 @@ export const Hero = () => {
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto text-center animate-fade-in">
         <h1 className="text-5xl md:text-7xl font-bold mb-6 text-foreground leading-tight">
-          {t('heroTitle')}
+          {language === 'en' ? (
+            <>
+              <span>Make your brand </span>
+              <span className="font-pirata text-accent">unmissable.</span>
+            </>
+          ) : (
+            <>
+              <span>Que tu marca no pase </span>
+              <span className="font-pirata text-accent">desapercibida.</span>
+            </>
+          )}
         </h1>
-        <p className="text-xl md:text-2xl mb-12 text-muted-foreground max-w-2xl mx-auto">
+        <p className="text-xl md:text-2xl mb-12 text-muted-foreground max-w-2xl mx-auto font-light">
           {t('heroSubtitle')}
         </p>
-        <Button 
-          size="lg" 
-          onClick={scrollToForm}
-          className="text-lg px-8 py-6 rounded-full font-medium"
-        >
-          {t('ctaButton')}
-        </Button>
+        <div className="flex flex-col items-center gap-4">
+          <Button 
+            size="lg" 
+            onClick={scrollToForm}
+            className="text-lg px-8 py-6 rounded-full font-medium hover:scale-105 transition-transform"
+          >
+            {t('ctaButton')}
+          </Button>
+          <Badge variant="secondary" className="text-sm px-4 py-2 rounded-full">
+            {t('ctaBadge')}
+          </Badge>
+        </div>
       </div>
 
       {/* Scroll indicator */}
