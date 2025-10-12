@@ -55,9 +55,30 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground font-sans;
+    cursor: default;
   }
   
   .font-pirata {
     font-family: 'Pirata One', cursive;
+  }
+
+  /* Scroll animations */
+  .scroll-fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fade-in 0.6s ease-out forwards;
+  }
+
+  /* Custom cursor */
+  * {
+    cursor: inherit;
+  }
+
+  a, button, [role="button"] {
+    cursor: pointer;
+  }
+
+  a:hover, button:hover, [role="button"]:hover {
+    cursor: pointer;
   }
 }

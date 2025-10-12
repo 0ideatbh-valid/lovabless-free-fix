@@ -22,10 +22,14 @@ const translations = {
     
     // What We Do
     whatWeDoTitle: "What we do",
-    service1: "Strategy & Positioning",
-    service2: "Social Media Cleanup",
-    service3: "Website Touch-Up",
-    service4: "Brand Messaging",
+    service1Title: "Brand Diagnosis",
+    service1Text: "We see what others don't — spotting weak points, opportunities, and where your brand gets stuck.",
+    service2Title: "Strategy & Positioning",
+    service2Text: "We build a plan that truly sets you apart — without empty promises or fluff.",
+    service3Title: "Digital Optimization",
+    service3Text: "We align your website and social channels so everything speaks the same clear language.",
+    service4Title: "Follow-Up & Consulting",
+    service4Text: "We stay with you, fine-tuning strategy and direction as your brand grows.",
     
     // How It Works
     howItWorksTitle: "How it works",
@@ -74,10 +78,14 @@ const translations = {
     
     // What We Do
     whatWeDoTitle: "Qué hacemos",
-    service1: "Estrategia y posicionamiento",
-    service2: "Limpieza de redes sociales",
-    service3: "Puesta a punto web",
-    service4: "Mensaje de marca",
+    service1Title: "Diagnóstico de Marca",
+    service1Text: "Vemos lo que otros no ven — detectamos puntos débiles, oportunidades y dónde se atasca tu marca.",
+    service2Title: "Estrategia y Posicionamiento",
+    service2Text: "Construimos un plan que te diferencia de verdad — sin promesas vacías ni relleno.",
+    service3Title: "Optimización Digital",
+    service3Text: "Alineamos tu web y redes sociales para que todo hable el mismo lenguaje claro.",
+    service4Title: "Seguimiento y Consultoría",
+    service4Text: "Nos quedamos contigo, ajustando estrategia y dirección mientras tu marca crece.",
     
     // How It Works
     howItWorksTitle: "Cómo funciona",

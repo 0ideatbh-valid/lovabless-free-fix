@@ -11,6 +11,16 @@ export const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background px-6">
+      {/* Animated gradient background */}
+      <div 
+        className="absolute inset-0 opacity-30 pointer-events-none"
+        style={{
+          background: 'linear-gradient(135deg, hsl(var(--bgb-red) / 0.1), hsl(var(--bgb-blue) / 0.1), hsl(var(--bgb-green) / 0.1))',
+          backgroundSize: '200% 200%',
+          animation: 'gradient-float 20s ease-in-out infinite'
+        }}
+      />
+      
       {/* Animated Circles - Bad, Good, Better */}
       <div className="absolute inset-0 pointer-events-none">
         <div 
