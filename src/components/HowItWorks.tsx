@@ -5,10 +5,10 @@ export const HowItWorks = () => {
   const { t } = useLanguage();
 
   const steps = [
-    { key: 'step1', number: '01', color: 'hsl(var(--bgb-red))' },
-    { key: 'step2', number: '02', color: 'hsl(var(--bgb-blue))' },
-    { key: 'step3', number: '03', color: 'hsl(156 73% 52%)' }, // blue-green blend
-    { key: 'step4', number: '04', color: 'hsl(var(--bgb-green))' },
+    { key: 'step1', number: '01', color: 'hsl(220, 15%, 65%)', animation: 'animate-float' },
+    { key: 'step2', number: '02', color: 'hsl(180, 20%, 60%)', animation: 'animate-float-delayed' },
+    { key: 'step3', number: '03', color: 'hsl(280, 20%, 65%)', animation: 'animate-float' },
+    { key: 'step4', number: '04', color: 'hsl(30, 35%, 65%)', animation: 'animate-float-delayed' },
   ];
 
   return (
@@ -23,16 +23,15 @@ export const HowItWorks = () => {
           {steps.map((step, index) => (
             <div key={step.key} className="flex items-center gap-4">
               <div 
-                className="flex-shrink-0 w-20 h-20 rounded-full text-white flex items-center justify-center font-bold text-2xl animate-scale-in shadow-lg"
+                className={`flex-shrink-0 w-20 h-20 rounded-full text-white flex items-center justify-center font-bold text-2xl shadow-lg ${step.animation}`}
                 style={{ 
                   background: step.color,
-                  animationDelay: `${index * 150}ms`
                 }}
               >
                 {step.number}
               </div>
               {index < steps.length - 1 && (
-                <ArrowRight className="text-muted-foreground flex-shrink-0" size={24} />
+                <ArrowRight className="text-muted-foreground flex-shrink-0 animate-fade-in" size={24} />
               )}
             </div>
           ))}
@@ -48,7 +47,7 @@ export const HowItWorks = () => {
             >
               {/* Mobile: show number circles */}
               <div 
-                className="md:hidden mx-auto mb-4 w-16 h-16 rounded-full text-white flex items-center justify-center font-bold text-xl animate-scale-in"
+                className={`md:hidden mx-auto mb-4 w-16 h-16 rounded-full text-white flex items-center justify-center font-bold text-xl ${step.animation}`}
                 style={{ background: step.color }}
               >
                 {step.number}
@@ -59,14 +58,6 @@ export const HowItWorks = () => {
             </div>
           ))}
         </div>
-      </div>
-
-      {/* Green circle divider */}
-      <div className="flex justify-center mt-16">
-        <div 
-          className="w-16 h-16 rounded-full"
-          style={{ background: 'hsl(var(--bgb-green))' }}
-        />
       </div>
     </section>
   );

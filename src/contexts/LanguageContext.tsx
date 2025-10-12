@@ -39,14 +39,14 @@ const translations = {
     step4: "You take it from there",
     
     // Form
-    formTitle: "Request Help",
+    formTitle: "Request Our Help!",
     businessName: "Business name",
     contactPerson: "Contact person",
     contactEmail: "Contact email",
-    website: "Website (if any)",
+    website: "Website or preferred social media channel",
     helpNeeded: "What do you need help with?",
     gdprNote: "We use your data only to process your request. No newsletters, no spam.",
-    formNote: "No fees. No spam. Limited slots per week.",
+    formNote: "No fees. No spam. Limited slots per month.",
     submitButton: "Send",
     successMessage: "Thanks! We'll review your request soon.",
     
@@ -55,13 +55,13 @@ const translations = {
     disclaimerText: "Submitting a request does not guarantee assistance. Each case is reviewed individually, and priority is given to projects where our work can have the greatest impact. If our schedule is full, we'll contact you when a slot opens.",
     
     // LinkedIn Panel
-    linkedInTitle: "Live: See what we're up to →",
+    linkedInTitle: "Check what we are up to on LinkedIn",
     linkedInButton: "Follow on LinkedIn",
     linkedInSubtext: "Follow updates and insights on LinkedIn.",
     
     // Footer
     footerText: "Made with blunt honesty by Bad Good Better Agency",
-    footerLocation: "Tenerife → Maasland",
+    footerLocation: "España → Países Bajos",
     footerTagline: "No clients. Just causes.",
     contactLabel: "Contact:",
   },
@@ -95,14 +95,14 @@ const translations = {
     step4: "A partir de ahí, decides tú",
     
     // Form
-    formTitle: "Formulario",
+    formTitle: "¡Solicita nuestra ayuda!",
     businessName: "Nombre del negocio",
     contactPerson: "Persona de contacto",
     contactEmail: "Correo electrónico",
-    website: "Página web (si la hay)",
+    website: "Web o canal social preferido",
     helpNeeded: "¿En qué necesitas ayuda?",
     gdprNote: "Usamos tus datos únicamente para gestionar tu solicitud. Sin boletines ni spam.",
-    formNote: "Sin costes. Sin spam. Plazas limitadas por semana.",
+    formNote: "Sin costes. Sin spam. Plazas limitadas al mes.",
     submitButton: "Enviar",
     successMessage: "¡Gracias! Revisaremos tu solicitud en breve.",
     
@@ -111,13 +111,13 @@ const translations = {
     disclaimerText: "Enviar una solicitud no garantiza que podamos ofrecer ayuda. Revisamos cada caso de forma individual y priorizamos aquellos en los que nuestro trabajo pueda generar mayor impacto. Si nuestra agenda está completa, te contactaremos cuando se libere una plaza.",
     
     // LinkedIn Panel
-    linkedInTitle: "Ahora: lo que estamos haciendo →",
+    linkedInTitle: "Descubre qué estamos haciendo en LinkedIn",
     linkedInButton: "Seguir en LinkedIn",
     linkedInSubtext: "Sigue las novedades y proyectos en LinkedIn.",
     
     // Footer
     footerText: "Hecho con honestidad directa por Bad Good Better Agency",
-    footerLocation: "Tenerife → Maasland",
+    footerLocation: "España → Países Bajos",
     footerTagline: "Sin clientes. Solo causas.",
     contactLabel: "Contacto:",
   },

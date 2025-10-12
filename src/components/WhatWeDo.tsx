@@ -30,7 +30,7 @@ export const WhatWeDo = () => {
   return (
     <section className="py-24 px-6 bg-background scroll-fade-in">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center text-foreground">
+        <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center text-foreground capitalize">
           {t('whatWeDoTitle')}
         </h2>
         
@@ -54,14 +54,6 @@ export const WhatWeDo = () => {
             );
           })}
         </div>
-      </div>
-
-      {/* Red circle divider */}
-      <div className="flex justify-center mt-16">
-        <div 
-          className="w-16 h-16 rounded-full"
-          style={{ background: 'hsl(var(--bgb-red))' }}
-        />
       </div>
     </section>
   );
