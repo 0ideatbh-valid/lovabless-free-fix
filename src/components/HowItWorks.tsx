@@ -12,9 +12,9 @@ export const HowItWorks = () => {
   ];
 
   return (
-    <section className="py-24 px-6 bg-background scroll-fade-in">
+    <section className="py-16 sm:py-24 px-4 sm:px-6 bg-background scroll-fade-in">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center text-foreground">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 sm:mb-16 text-center text-foreground">
           {t('howItWorksTitle')}
         </h2>
         
@@ -38,28 +38,28 @@ export const HowItWorks = () => {
         </div>
         
         {/* Step descriptions */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 sm:gap-8">
           {steps.map((step, index) => (
             <div 
               key={step.key}
-              className="text-center"
+              className="text-center group"
               style={{ animationDelay: `${index * 150}ms` }}
             >
               {/* Mobile: show number circles */}
               <div 
-                className={`md:hidden mx-auto mb-4 w-16 h-16 rounded-full text-white flex items-center justify-center font-bold text-xl ${step.animation}`}
+                className={`md:hidden mx-auto mb-4 w-14 h-14 sm:w-16 sm:h-16 rounded-full text-white flex items-center justify-center font-bold text-lg sm:text-xl ${step.animation} group-hover:scale-110 transition-transform duration-300`}
                 style={{ background: step.color }}
               >
                 {step.number}
               </div>
               <div className="flex items-start gap-2 justify-center">
                 <span 
-                  className="flex-shrink-0 w-6 h-6 rounded-full text-white flex items-center justify-center font-semibold text-sm"
+                  className="flex-shrink-0 w-6 h-6 rounded-full text-white flex items-center justify-center font-semibold text-sm group-hover:scale-110 transition-transform duration-300"
                   style={{ background: step.color }}
                 >
                   {step.smallNumber}
                 </span>
-                <p className="text-base text-foreground leading-relaxed text-left flex-1">
+                <p className="text-sm sm:text-base text-foreground leading-relaxed text-left flex-1">
                   {t(step.key)}
                 </p>
               </div>

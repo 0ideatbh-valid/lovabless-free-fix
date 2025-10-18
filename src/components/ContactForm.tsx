@@ -57,79 +57,79 @@ export const ContactForm = () => {
   };
 
   return (
-    <section id="contact-form" className="py-24 px-6 bg-background">
+    <section id="contact-form" className="py-16 sm:py-24 px-4 sm:px-6 bg-background scroll-fade-in">
       <div className="max-w-2xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center text-foreground">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-12 text-center text-foreground">
           {t('formTitle')}
         </h2>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
-          <div>
+        <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+          <div className="group">
             <Input
               required
               type="text"
               placeholder={t('businessName')}
               value={formData.businessName}
               onChange={(e) => setFormData({ ...formData, businessName: e.target.value })}
-              className="w-full"
+              className="w-full transition-all duration-300 focus:scale-[1.01]"
             />
           </div>
 
-          <div>
+          <div className="group">
             <Input
               required
               type="text"
               placeholder={t('contactPerson')}
               value={formData.contactPerson}
               onChange={(e) => setFormData({ ...formData, contactPerson: e.target.value })}
-              className="w-full"
+              className="w-full transition-all duration-300 focus:scale-[1.01]"
             />
           </div>
 
-          <div>
+          <div className="group">
             <Input
               required
               type="email"
               placeholder={t('contactEmail')}
               value={formData.contactEmail}
               onChange={(e) => setFormData({ ...formData, contactEmail: e.target.value })}
-              className="w-full"
+              className="w-full transition-all duration-300 focus:scale-[1.01]"
             />
           </div>
 
-          <div>
+          <div className="group">
             <Input
               type="url"
               placeholder={t('website')}
               value={formData.website}
               onChange={(e) => setFormData({ ...formData, website: e.target.value })}
-              className="w-full"
+              className="w-full transition-all duration-300 focus:scale-[1.01]"
             />
           </div>
 
-          <div>
+          <div className="group">
             <Textarea
               required
               placeholder={t('helpNeeded')}
               value={formData.helpNeeded}
               onChange={(e) => setFormData({ ...formData, helpNeeded: e.target.value })}
-              className="w-full min-h-32"
+              className="w-full min-h-32 transition-all duration-300 focus:scale-[1.01]"
             />
           </div>
 
-          <p className="text-sm text-muted-foreground text-center">
+          <p className="text-xs sm:text-sm text-muted-foreground text-center">
             {t('gdprNote')}
           </p>
 
           <Button 
             type="submit" 
-            className="w-full text-lg py-6 rounded-full font-medium"
+            className="w-full text-base sm:text-lg py-5 sm:py-6 rounded-full font-medium hover:scale-105 hover:shadow-lg transition-all duration-300"
             disabled={isSubmitting}
           >
             {isSubmitting ? '...' : t('submitButton')}
           </Button>
 
-          <p className="text-center text-sm text-muted-foreground">
+          <p className="text-center text-xs sm:text-sm text-muted-foreground">
             {t('formNote')}
           </p>
         </form>

@@ -32,10 +32,10 @@ export const ScrollToTop = () => {
   return (
     <Button
       onClick={scrollToTop}
-      className="fixed bottom-8 right-8 z-50 rounded-full w-12 h-12 p-0"
+      className="fixed bottom-6 right-6 sm:bottom-8 sm:right-8 z-50 rounded-full w-10 h-10 sm:w-12 sm:h-12 p-0 shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 animate-fade-in"
       size="icon"
     >
-      <ArrowUp className="h-5 w-5" />
+      <ArrowUp className="h-4 w-4 sm:h-5 sm:w-5" />
     </Button>
   );
 };
