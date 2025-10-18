@@ -5,10 +5,10 @@ export const HowItWorks = () => {
   const { t } = useLanguage();
 
   const steps = [
-    { key: 'step1', number: '01', color: 'hsl(220, 15%, 65%)', animation: 'animate-float' },
-    { key: 'step2', number: '02', color: 'hsl(180, 20%, 60%)', animation: 'animate-float-delayed' },
-    { key: 'step3', number: '03', color: 'hsl(280, 20%, 65%)', animation: 'animate-float' },
-    { key: 'step4', number: '04', color: 'hsl(30, 35%, 65%)', animation: 'animate-float-delayed' },
+    { key: 'step1', number: '01', smallNumber: '1', color: 'hsl(220, 15%, 65%)', animation: 'animate-float' },
+    { key: 'step2', number: '02', smallNumber: '2', color: 'hsl(180, 20%, 60%)', animation: 'animate-float-delayed' },
+    { key: 'step3', number: '03', smallNumber: '3', color: 'hsl(280, 20%, 65%)', animation: 'animate-float' },
+    { key: 'step4', number: '04', smallNumber: '4', color: 'hsl(30, 35%, 65%)', animation: 'animate-float-delayed' },
   ];
 
   return (
@@ -52,9 +52,17 @@ export const HowItWorks = () => {
               >
                 {step.number}
               </div>
-              <p className="text-base text-foreground leading-relaxed">
-                {t(step.key)}
-              </p>
+              <div className="flex items-start gap-2 justify-center">
+                <span 
+                  className="flex-shrink-0 w-6 h-6 rounded-full text-white flex items-center justify-center font-semibold text-sm"
+                  style={{ background: step.color }}
+                >
+                  {step.smallNumber}
+                </span>
+                <p className="text-base text-foreground leading-relaxed text-left flex-1">
+                  {t(step.key)}
+                </p>
+              </div>
             </div>
           ))}
         </div>
