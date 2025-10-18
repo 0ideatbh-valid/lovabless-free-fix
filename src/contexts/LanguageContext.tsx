@@ -16,6 +16,10 @@ const translations = {
     ctaButton: "Request help",
     ctaBadge: "No contracts • No fees",
     
+    // Who Are We
+    whoAreWeTitle: "Who are we",
+    whoAreWeText: "We're a group of young professionals from marketing, design, and creative fields who believe small businesses deserve real, honest strategy — not jargon. We combine analytical thinking with creativity to help brands find clarity, purpose, and momentum. No buzzwords. No fees. Just better work, made simple.",
+    
     // Why Free
     whyFreeTitle: "Why Free?",
     whyFreeText: "We're not selling kindness. We just believe bad marketing kills good businesses — and we can't watch that happen. So we help. No contracts, no catch. If it helped, some people choose to thank us later — that's optional.",
@@ -71,6 +75,10 @@ const translations = {
     heroSubtitle: "Estrategia, posicionamiento y limpieza. Gratis.",
     ctaButton: "Pedir ayuda",
     ctaBadge: "Sin contratos • Sin costes",
+    
+    // Who Are We
+    whoAreWeTitle: "Quiénes somos",
+    whoAreWeText: "Somos un grupo de jóvenes profesionales del marketing, el diseño y otras disciplinas creativas que creemos que los pequeños negocios merecen una estrategia real y honesta, sin tecnicismos. Combinamos pensamiento analítico y creatividad para ayudar a las marcas a encontrar claridad, propósito y crecimiento. Sin palabras vacías. Sin costes. Solo trabajo mejor, hecho sencillo.",
     
     // Why Free
     whyFreeTitle: "¿Por qué gratis?",

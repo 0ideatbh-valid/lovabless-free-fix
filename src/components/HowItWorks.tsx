@@ -19,7 +19,7 @@ export const HowItWorks = () => {
         </h2>
         
         {/* Desktop horizontal flow */}
-        <div className="hidden md:flex items-center justify-between gap-4 mb-8">
+        <div className="hidden md:flex items-start justify-center gap-4 mb-12">
           {steps.map((step, index) => (
             <div key={step.key} className="flex items-center gap-4">
               <div 
@@ -38,11 +38,11 @@ export const HowItWorks = () => {
         </div>
         
         {/* Step descriptions */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {steps.map((step, index) => (
             <div 
               key={step.key}
-              className="text-center md:text-left"
+              className="text-center"
               style={{ animationDelay: `${index * 150}ms` }}
             >
               {/* Mobile: show number circles */}

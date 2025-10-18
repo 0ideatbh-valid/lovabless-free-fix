@@ -1,5 +1,6 @@
 import { LanguageToggle } from "@/components/LanguageToggle";
 import { Hero } from "@/components/Hero";
+import { WhoAreWe } from "@/components/WhoAreWe";
 import { WhyFree } from "@/components/WhyFree";
 import { WhatWeDo } from "@/components/WhatWeDo";
 import { HowItWorks } from "@/components/HowItWorks";
@@ -14,6 +15,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <LanguageToggle />
       <Hero />
+      <WhoAreWe />
       <WhyFree />
       <WhatWeDo />
       <HowItWorks />
