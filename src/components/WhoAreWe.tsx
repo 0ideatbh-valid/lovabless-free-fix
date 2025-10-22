@@ -4,9 +4,9 @@ export const WhoAreWe = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="py-24 px-6 bg-background scroll-fade-in">
+    <section className="py-16 px-6 bg-background scroll-fade-in">
       {/* Separator line */}
-      <div className="max-w-6xl mx-auto mb-16">
+      <div className="max-w-6xl mx-auto mb-12">
         <div className="h-px bg-border" />
       </div>
       
