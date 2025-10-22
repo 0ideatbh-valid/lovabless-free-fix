@@ -1,6 +1,5 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Button } from "./ui/button";
-import { Badge } from "./ui/badge";
 
 export const Hero = () => {
   const { t, language } = useLanguage();
@@ -10,87 +9,58 @@ export const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background px-6">
-      {/* Animated gradient background */}
-      <div 
-        className="absolute inset-0 opacity-30 pointer-events-none"
-        style={{
-          background: 'linear-gradient(135deg, hsl(var(--bgb-red) / 0.1), hsl(var(--bgb-blue) / 0.1), hsl(var(--bgb-green) / 0.1))',
-          backgroundSize: '200% 200%',
-          animation: 'gradient-float 20s ease-in-out infinite'
-        }}
-      />
-      
-      {/* Animated Circles - Bad, Good, Better */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div 
-          className="absolute w-64 h-64 rounded-full opacity-20 animate-float-scale"
-          style={{ 
-            background: 'hsl(var(--bgb-red))',
-            top: '10%',
-            left: '10%',
-            filter: 'blur(60px)'
-          }}
-        />
-        <div 
-          className="absolute w-80 h-80 rounded-full opacity-20 animate-float-scale"
-          style={{ 
-            background: 'hsl(var(--bgb-blue))',
-            top: '40%',
-            right: '15%',
-            filter: 'blur(70px)',
-            animationDelay: '2s'
-          }}
-        />
-        <div 
-          className="absolute w-72 h-72 rounded-full opacity-20 animate-float-scale"
-          style={{ 
-            background: 'hsl(var(--bgb-green))',
-            bottom: '15%',
-            left: '50%',
-            transform: 'translateX(-50%)',
-            filter: 'blur(65px)',
-            animationDelay: '4s'
-          }}
-        />
-      </div>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
+      <div className="max-w-7xl mx-auto px-6 py-20 w-full">
+        <div className="border-2 border-foreground rounded-3xl p-8 md:p-16 lg:p-20 relative overflow-hidden bg-background">
+          {/* Decorative elements */}
+          <div className="absolute top-6 right-6 w-8 h-8 rounded-full border-2 border-foreground" />
+          <div className="absolute bottom-6 right-12 w-6 h-6 rounded-full bg-foreground" />
+          
+          <div className="grid md:grid-cols-2 gap-12 items-center relative z-10">
+            {/* Left content */}
+            <div>
+              <h1 className="text-6xl md:text-7xl lg:text-8xl font-black mb-8 text-foreground leading-[0.9] tracking-tight">
+                {language === 'en' ? (
+                  <>Make something great</>
+                ) : (
+                  <>Haz algo grandioso</>
+                )}
+              </h1>
+              <Button 
+                size="lg" 
+                onClick={scrollToForm}
+                className="text-lg px-10 py-7 rounded-full font-medium bg-[#FFB8A8] hover:bg-[#FF9B87] text-foreground border-none shadow-lg hover:scale-105 transition-all"
+              >
+                {language === 'en' ? "Let's go" : "Vamos"}
+              </Button>
+            </div>
 
-      {/* Content */}
-      <div className="relative z-10 max-w-4xl mx-auto text-center animate-fade-in">
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 text-foreground leading-tight">
-          {language === 'en' ? (
-            <>
-              <span>Make your brand </span>
-              <span className="font-pirata text-accent">unmissable.</span>
-            </>
-          ) : (
-            <>
-              <span>Que tu marca no pase </span>
-              <span className="font-pirata text-accent">desapercibida.</span>
-            </>
-          )}
-        </h1>
-        <p className="text-xl md:text-2xl mb-12 text-muted-foreground max-w-2xl mx-auto font-light">
-          {t('heroSubtitle')}
-        </p>
-        <div className="flex flex-col items-center gap-4">
-          <Button 
-            size="lg" 
-            onClick={scrollToForm}
-            className="text-lg px-8 py-6 rounded-full font-medium hover:scale-105 transition-transform"
-          >
-            {t('ctaButton')}
-          </Button>
-          <Badge variant="secondary" className="text-sm px-4 py-2 rounded-full">
-            {t('ctaBadge')}
-          </Badge>
+            {/* Right decorative text */}
+            <div className="hidden md:flex items-center justify-center relative">
+              <div className="text-[12rem] font-black text-foreground/5 leading-none select-none rotate-12">
+                {language === 'en' ? 'motion' : 'movimiento'}
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-        <div className="w-6 h-10 border-2 border-foreground/20 rounded-full flex justify-center">
-          <div className="w-1 h-2 bg-foreground/40 rounded-full mt-2 animate-bounce" />
+        {/* Bottom cards */}
+        <div className="grid md:grid-cols-3 gap-6 mt-6">
+          <div className="bg-[#F5F5F5] border-2 border-foreground rounded-3xl p-8">
+            <p className="text-sm text-muted-foreground mb-2">
+              {language === 'en' ? 'This example is inspired by creative agencies making bold statements.' : 'Este ejemplo está inspirado en agencias creativas que hacen declaraciones audaces.'}
+            </p>
+          </div>
+          
+          <div className="bg-background border-2 border-foreground rounded-3xl p-8 flex items-center justify-center">
+            <div className="text-6xl font-black">"</div>
+          </div>
+          
+          <div className="bg-[#FFE8E8] border-2 border-foreground rounded-3xl p-8">
+            <h3 className="text-xl font-bold mb-3 text-foreground">
+              {t('heroSubtitle')}
+            </h3>
+          </div>
         </div>
       </div>
     </section>

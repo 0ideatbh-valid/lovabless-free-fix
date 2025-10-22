@@ -42,24 +42,24 @@ export const HowItWorks = () => {
           {steps.map((step, index) => (
             <div 
               key={step.key}
-              className="text-center"
+              className="text-center md:text-left"
               style={{ animationDelay: `${index * 150}ms` }}
             >
-              {/* Mobile: show number circles */}
+              {/* Mobile: show number circles centered */}
               <div 
                 className={`md:hidden mx-auto mb-4 w-16 h-16 rounded-full text-white flex items-center justify-center font-bold text-xl ${step.animation}`}
                 style={{ background: step.color }}
               >
                 {step.number}
               </div>
-              <div className="flex items-start gap-2 justify-center">
+              <div className="flex items-start gap-2 justify-center md:justify-start">
                 <span 
                   className="flex-shrink-0 w-6 h-6 rounded-full text-white flex items-center justify-center font-semibold text-sm"
                   style={{ background: step.color }}
                 >
                   {step.smallNumber}
                 </span>
-                <p className="text-base text-foreground leading-relaxed text-left flex-1">
+                <p className="text-base text-foreground leading-relaxed text-center md:text-left flex-1">
                   {t(step.key)}
                 </p>
               </div>
