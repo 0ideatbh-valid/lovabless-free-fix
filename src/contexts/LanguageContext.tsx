@@ -20,7 +20,7 @@ const translations = {
     reviewsTitle: "people we helped",
     
     // Who Are We
-    whoAreWeTitle: "Who are we",
+    whoAreWeTitle: "About Us",
     whoAreWeText: "Bad Good Better Agency is a marketing collective of young professionals from branding, digital marketing, and creative strategy who believe small businesses deserve accessible marketing services without the agency fees. We offer free brand consulting, marketing strategy, and digital positioning to help businesses grow. Our team combines analytical thinking with creative solutions for brand development, content marketing, and business positioning. No jargon. No fees. Just honest marketing strategy made accessible.",
     
     // Why Free
@@ -84,7 +84,7 @@ const translations = {
     reviewsTitle: "gente a la que ayudamos",
     
     // Who Are We
-    whoAreWeTitle: "Quiénes somos",
+    whoAreWeTitle: "Sobre Nosotros",
     whoAreWeText: "Somos un grupo de jóvenes profesionales del marketing, el diseño y otras disciplinas creativas que creemos que los pequeños negocios merecen una estrategia real y honesta, sin tecnicismos. Combinamos pensamiento analítico y creatividad para ayudar a las marcas a encontrar claridad, propósito y crecimiento. Sin palabras vacías. Sin costes. Solo trabajo mejor, hecho sencillo.",
     
     // Why Free
