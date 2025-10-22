@@ -6,6 +6,78 @@
 All colors MUST be HSL.
 */
 
+/* Drifting words animations */
+@keyframes drift-a {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes drift-b {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes ticker-move {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.animate-drift-a {
+  animation: drift-a 45s linear infinite;
+}
+
+.animate-drift-b {
+  animation: drift-b 60s linear infinite;
+}
+
+.animate-ticker {
+  animation: ticker-move 40s linear infinite;
+}
+
+/* Mobile optimizations - slower, fewer rows */
+@media (max-width: 420px) {
+  .animate-drift-a {
+    animation-duration: 60s;
+  }
+  .row-b {
+    display: none;
+  }
+}
+
+/* Tablet optimization */
+@media (min-width: 421px) and (max-width: 768px) {
+  .animate-drift-a {
+    animation-duration: 50s;
+  }
+  .animate-drift-b {
+    animation-duration: 70s;
+  }
+}
+
+/* Reduced motion: hide drifting, show ticker */
+@media (prefers-reduced-motion: reduce) {
+  .drifting-words-container {
+    display: none !important;
+  }
+  .marketing-ticker {
+    display: block !important;
+  }
+  .animate-drift-a,
+  .animate-drift-b {
+    animation: none !important;
+  }
+}
+
+/* Also show ticker on very small mobile */
+@media (max-width: 420px) {
+  .drifting-words-container {
+    display: none;
+  }
+  .marketing-ticker {
+    display: block !important;
+  }
+}
+
 @layer base {
   :root {
     /* BGB Brand Colors */

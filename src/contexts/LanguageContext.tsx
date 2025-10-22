@@ -6,6 +6,7 @@ interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
   t: (key: string) => string;
+  tArray: (key: string) => string[];
 }
 
 const translations = {
@@ -15,6 +16,7 @@ const translations = {
     heroSubtitle: "Strategy. Positioning. Cleanup. Free.",
     ctaButton: "Request help",
     ctaBadge: "No contracts • No fees",
+    waveWords: ["Brand strategy", "Positioning", "Social content", "Paid ads", "SEO", "Email", "CRO", "Analytics", "Web design", "Automations", "Community", "Partnerships", "Funnels", "A/B testing", "Content ops", "Local SEO", "Listings", "Reputation", "Performance creative"],
     
     // Reviews Section
     reviewsTitle: "People We Helped",
@@ -85,6 +87,7 @@ const translations = {
     heroSubtitle: "Estrategia, posicionamiento y limpieza. Gratis.",
     ctaButton: "Pedir ayuda",
     ctaBadge: "Sin contratos • Sin costes",
+    waveWords: ["Estrategia de marca", "Posicionamiento", "Contenido social", "Ads pagados", "SEO", "Email", "CRO", "Analítica", "Diseño web", "Automatizaciones", "Comunidad", "Alianzas", "Embudos", "Test A/B", "Operaciones de contenido", "SEO local", "Directorios", "Reputación", "Creatividades de performance"],
     
     // Reviews Section
     reviewsTitle: "Gente A La Que Ayudamos",
@@ -157,11 +160,17 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   const [language, setLanguage] = useState<Language>('en');
 
   const t = (key: string): string => {
-    return translations[language][key as keyof typeof translations.en] || key;
+    const value = translations[language][key as keyof typeof translations.en];
+    return typeof value === 'string' ? value : key;
+  };
+
+  const tArray = (key: string): string[] => {
+    const value = translations[language][key as keyof typeof translations.en];
+    return Array.isArray(value) ? value : [];
   };
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+    <LanguageContext.Provider value={{ language, setLanguage, t, tArray }}>
       {children}
     </LanguageContext.Provider>
   );

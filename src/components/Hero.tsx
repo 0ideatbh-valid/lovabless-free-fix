@@ -1,6 +1,7 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Button } from "./ui/button";
 import { LogoAnimation } from "./ui/logo-animation";
+import { DriftingWordsWave } from "./DriftingWordsWave";
 import { Sparkles, Users, Gift } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 
@@ -34,6 +35,9 @@ export const Hero = () => {
         <div ref={heroRef} className="border-2 border-foreground rounded-3xl p-8 md:p-16 lg:p-20 relative overflow-hidden bg-background">
           {/* Logo Animation Background */}
           <LogoAnimation />
+          
+          {/* Drifting words in the wave - positioned above LogoAnimation, below content */}
+          <DriftingWordsWave />
           
           {/* Decorative elements */}
           <div className="absolute top-6 right-6 w-8 h-8 rounded-full border-2 border-foreground" />
