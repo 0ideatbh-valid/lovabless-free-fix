@@ -44,9 +44,9 @@ export const Hero = () => {
           <div>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-foreground leading-[0.9] tracking-tight">
                 {language === 'en' ? (
-                  <>Make your brand <span className="font-pirata text-[hsl(210,73%,60%)]">unmissable</span></>
+                  <>Make your brand <span className="font-pirata text-[hsl(210,73%,60%)] drop-shadow-[0_2px_8px_rgba(96,165,250,0.4)]">unmissable</span></>
                 ) : (
-                  <>Haz que tu marca no pase <span className="font-pirata text-[hsl(210,73%,60%)]">desapercibida</span></>
+                  <>Haz que tu marca no pase <span className="font-pirata text-[hsl(210,73%,60%)] drop-shadow-[0_2px_8px_rgba(96,165,250,0.4)]">desapercibida</span></>
                 )}
               </h1>
               <Button 
