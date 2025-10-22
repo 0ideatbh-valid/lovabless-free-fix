@@ -18,22 +18,22 @@ const translations = {
     
     // Who Are We
     whoAreWeTitle: "Who are we",
-    whoAreWeText: "We're a group of young professionals from marketing, design, and creative fields who believe small businesses deserve real, honest strategy — not jargon. We combine analytical thinking with creativity to help brands find clarity, purpose, and momentum. No buzzwords. No fees. Just better work, made simple.",
+    whoAreWeText: "Bad Good Better Agency is a marketing collective of young professionals from branding, digital marketing, and creative strategy who believe small businesses deserve professional marketing services without the agency fees. We offer free brand consulting, marketing strategy, and digital positioning to help businesses grow. Our marketing experts combine analytical thinking with creative solutions for brand development, content marketing, and business positioning. No jargon. No fees. Just honest marketing strategy made accessible.",
     
     // Why Free
-    whyFreeTitle: "Why Free?",
-    whyFreeText: "We're not selling kindness. We just believe bad marketing kills good businesses — and we can't watch that happen. So we help. No contracts, no catch. If it helped, some people choose to thank us later — that's optional.",
+    whyFreeTitle: "Why Free Marketing Services?",
+    whyFreeText: "Bad Good Better Agency believes that poor marketing destroys good businesses. Too many small businesses can't afford professional marketing agencies or brand consultants, yet need strategic marketing guidance to compete. We provide free marketing consulting, brand strategy, and digital marketing support because we believe great businesses deserve great marketing. No contracts, no hidden fees, no catch. Professional marketing services should be accessible to all businesses ready to grow.",
     
     // What We Do
     whatWeDoTitle: "What we do",
-    service1Title: "Brand Diagnosis",
-    service1Text: "We see what others don't — spotting weak points, opportunities, and where your brand gets stuck.",
-    service2Title: "Strategy & Positioning",
-    service2Text: "We build a plan that truly sets you apart — without empty promises or fluff.",
-    service3Title: "Digital Optimization",
-    service3Text: "We align your website and social channels so everything speaks the same clear language.",
-    service4Title: "Follow-Up & Consulting",
-    service4Text: "We stay with you, fine-tuning strategy and direction as your brand grows.",
+    service1Title: "Brand Audit & Marketing Analysis",
+    service1Text: "Professional brand diagnosis identifying marketing weaknesses, market positioning opportunities, and strategic growth areas for your business.",
+    service2Title: "Marketing Strategy & Brand Positioning",
+    service2Text: "Comprehensive marketing plans and brand positioning strategies that differentiate your business in competitive markets through data-driven insights.",
+    service3Title: "Digital Marketing Optimization",
+    service3Text: "Website optimization, social media marketing strategy, and digital brand consistency across all marketing channels for maximum impact.",
+    service4Title: "Ongoing Marketing Consulting",
+    service4Text: "Continuous marketing support, strategic consulting, and brand development guidance as your business scales and market conditions evolve.",
     
     // How It Works
     howItWorksTitle: "How it works",

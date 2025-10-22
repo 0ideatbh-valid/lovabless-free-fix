@@ -1,7 +1,8 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export const LogoAnimation = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -18,6 +19,16 @@ export const LogoAnimation = () => {
 
     setCanvasSize();
     window.addEventListener("resize", setCanvasSize);
+
+    const handleMouseMove = (e: MouseEvent) => {
+      const rect = canvas.getBoundingClientRect();
+      setMousePos({
+        x: e.clientX - rect.left,
+        y: e.clientY - rect.top,
+      });
+    };
+
+    canvas.addEventListener("mousemove", handleMouseMove);
 
     let animationId: number;
     let time = 0;
@@ -59,29 +70,33 @@ export const LogoAnimation = () => {
       
       time += 0.02;
       
-      // Black circle (top left)
+      // Calculate mouse influence
+      const mousePullX = (mousePos.x - width / 2) * 0.03;
+      const mousePullY = (mousePos.y - height / 2) * 0.03;
+      
+      // Black circle (top left) - reacts to mouse
       drawBlob(
-        width * 0.3,
-        height * 0.35,
+        width * 0.3 + mousePullX * 0.5,
+        height * 0.35 + mousePullY * 0.5,
         40,
         "hsl(0, 0%, 7%)",
         0
       );
       
-      // Red/orange teardrop (top right)
+      // Red/orange teardrop (top right) - reacts to mouse
       const gradient1 = ctx.createRadialGradient(
-        width * 0.7,
-        height * 0.3,
+        width * 0.7 + mousePullX * 0.8,
+        height * 0.3 + mousePullY * 0.8,
         0,
-        width * 0.7,
-        height * 0.3,
+        width * 0.7 + mousePullX * 0.8,
+        height * 0.3 + mousePullY * 0.8,
         60
       );
       gradient1.addColorStop(0, "hsl(8, 77%, 58%)");
       gradient1.addColorStop(1, "hsl(8, 77%, 48%)");
       drawBlob(
-        width * 0.7,
-        height * 0.3,
+        width * 0.7 + mousePullX * 0.8,
+        height * 0.3 + mousePullY * 0.8,
         50,
         gradient1,
         Math.PI * 0.66
@@ -126,9 +141,10 @@ export const LogoAnimation = () => {
 
     return () => {
       window.removeEventListener("resize", setCanvasSize);
+      canvas.removeEventListener("mousemove", handleMouseMove);
       cancelAnimationFrame(animationId);
     };
-  }, []);
+  }, [mousePos]);
 
   return (
     <canvas

@@ -1,19 +1,37 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Button } from "./ui/button";
 import { LogoAnimation } from "./ui/logo-animation";
-import { Sparkles, Users, Zap } from "lucide-react";
+import { Sparkles, Users, Gift } from "lucide-react";
+import { useState, useRef, useEffect } from "react";
 
 export const Hero = () => {
   const { t, language } = useLanguage();
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const heroRef = useRef<HTMLDivElement>(null);
 
   const scrollToForm = () => {
     document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      if (heroRef.current) {
+        const rect = heroRef.current.getBoundingClientRect();
+        setMousePos({
+          x: (e.clientX - rect.left - rect.width / 2) / 20,
+          y: (e.clientY - rect.top - rect.height / 2) / 20,
+        });
+      }
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
       <div className="max-w-7xl mx-auto px-6 py-20 w-full">
-        <div className="border-2 border-foreground rounded-3xl p-8 md:p-16 lg:p-20 relative overflow-hidden bg-background">
+        <div ref={heroRef} className="border-2 border-foreground rounded-3xl p-8 md:p-16 lg:p-20 relative overflow-hidden bg-background">
           {/* Logo Animation Background */}
           <LogoAnimation />
           
@@ -26,9 +44,9 @@ export const Hero = () => {
             <div>
               <h1 className="text-6xl md:text-7xl lg:text-8xl font-black mb-8 text-foreground leading-[0.9] tracking-tight">
                 {language === 'en' ? (
-                  <>Make something great</>
+                  <>Make your brand unmissable</>
                 ) : (
-                  <>Haz algo grandioso</>
+                  <>Haz que tu marca no pase desapercibida</>
                 )}
               </h1>
               <Button 
@@ -40,12 +58,30 @@ export const Hero = () => {
               </Button>
             </div>
 
-            {/* Right decorative - Logo shapes */}
+            {/* Right decorative - Logo shapes with cursor interaction */}
             <div className="hidden md:flex items-center justify-center relative">
               <div className="relative w-64 h-64">
-                <div className="absolute top-8 left-8 w-16 h-16 rounded-full bg-foreground animate-float" style={{ animationDelay: '0s' }} />
-                <div className="absolute top-4 right-8 w-20 h-24 rounded-[50%] bg-gradient-to-b from-[hsl(8,77%,58%)] to-[hsl(8,77%,48%)] animate-float" style={{ animationDelay: '0.5s' }} />
-                <div className="absolute bottom-8 left-4 right-4 h-20 rounded-[50%] bg-gradient-to-r from-[hsl(156,73%,52%)] via-[hsl(180,73%,52%)] to-[hsl(210,73%,55%)] animate-float" style={{ animationDelay: '1s' }} />
+                <div 
+                  className="absolute top-8 left-8 w-16 h-16 rounded-full bg-foreground animate-float transition-transform duration-300 ease-out" 
+                  style={{ 
+                    animationDelay: '0s',
+                    transform: `translate(${mousePos.x * 0.5}px, ${mousePos.y * 0.5}px)`
+                  }} 
+                />
+                <div 
+                  className="absolute top-4 right-8 w-20 h-24 rounded-[50%] bg-gradient-to-b from-[hsl(8,77%,58%)] to-[hsl(8,77%,48%)] animate-float transition-transform duration-300 ease-out" 
+                  style={{ 
+                    animationDelay: '0.5s',
+                    transform: `translate(${mousePos.x * 0.8}px, ${mousePos.y * 0.8}px)`
+                  }} 
+                />
+                <div 
+                  className="absolute bottom-8 left-4 right-4 h-20 rounded-[50%] bg-gradient-to-r from-[hsl(156,73%,52%)] via-[hsl(180,73%,52%)] to-[hsl(210,73%,55%)] animate-float transition-transform duration-300 ease-out" 
+                  style={{ 
+                    animationDelay: '1s',
+                    transform: `translate(${mousePos.x * 0.6}px, ${mousePos.y * 0.6}px)`
+                  }} 
+                />
               </div>
             </div>
           </div>
@@ -56,30 +92,30 @@ export const Hero = () => {
           <div className="bg-gradient-to-br from-[hsl(8,77%,58%)] to-[hsl(8,77%,48%)] border-2 border-foreground rounded-3xl p-8 hover:scale-105 transition-transform duration-300">
             <Sparkles className="w-8 h-8 mb-4 text-white" />
             <h3 className="text-xl font-bold mb-2 text-white">
-              {language === 'en' ? 'Creative Excellence' : 'Excelencia Creativa'}
+              {language === 'en' ? 'Strategic Marketing Consulting' : 'Consultoría Estratégica de Marketing'}
             </h3>
             <p className="text-sm text-white/90">
-              {language === 'en' ? 'Innovative strategies that make your brand stand out' : 'Estrategias innovadoras que hacen destacar tu marca'}
+              {language === 'en' ? 'Expert brand strategy and digital marketing services to position your business effectively' : 'Estrategia de marca experta y servicios de marketing digital para posicionar tu negocio efectivamente'}
             </p>
           </div>
           
           <div className="bg-gradient-to-br from-[hsl(210,73%,65%)] to-[hsl(210,73%,55%)] border-2 border-foreground rounded-3xl p-8 hover:scale-105 transition-transform duration-300">
             <Users className="w-8 h-8 mb-4 text-white" />
             <h3 className="text-xl font-bold mb-2 text-white">
-              {language === 'en' ? 'Team Collaboration' : 'Colaboración en Equipo'}
+              {language === 'en' ? 'Marketing-Savvy Collaboration' : 'Colaboración Experta'}
             </h3>
             <p className="text-sm text-white/90">
-              {language === 'en' ? 'Work together seamlessly with our expert team' : 'Trabaja sin problemas con nuestro equipo experto'}
+              {language === 'en' ? 'Work with savvy marketing professionals who understand small business growth' : 'Trabaja con profesionales del marketing que entienden el crecimiento de pequeños negocios'}
             </p>
           </div>
           
           <div className="bg-gradient-to-br from-[hsl(156,73%,62%)] to-[hsl(156,73%,52%)] border-2 border-foreground rounded-3xl p-8 hover:scale-105 transition-transform duration-300">
-            <Zap className="w-8 h-8 mb-4 text-white" />
+            <Gift className="w-8 h-8 mb-4 text-white" />
             <h3 className="text-xl font-bold mb-2 text-white">
-              {language === 'en' ? 'Fast Results' : 'Resultados Rápidos'}
+              {language === 'en' ? 'Free Marketing Support' : 'Soporte de Marketing Gratuito'}
             </h3>
             <p className="text-sm text-white/90">
-              {language === 'en' ? 'Quick turnaround without compromising quality' : 'Entrega rápida sin comprometer la calidad'}
+              {language === 'en' ? 'Professional marketing agency services at no cost - helping good businesses succeed' : 'Servicios profesionales de agencia de marketing sin coste - ayudando a buenos negocios a tener éxito'}
             </p>
           </div>
         </div>
