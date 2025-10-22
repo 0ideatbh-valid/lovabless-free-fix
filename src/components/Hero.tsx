@@ -41,12 +41,12 @@ export const Hero = () => {
           
           <div className="grid md:grid-cols-2 gap-12 items-center relative z-10">
             {/* Left content */}
-            <div>
-              <h1 className="text-6xl md:text-7xl lg:text-8xl font-black mb-8 text-foreground leading-[0.9] tracking-tight">
+          <div>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-foreground leading-[0.9] tracking-tight">
                 {language === 'en' ? (
-                  <>Make your brand unmissable</>
+                  <>Make your brand <span className="font-pirata text-[hsl(210,73%,60%)]">unmissable</span></>
                 ) : (
-                  <>Haz que tu marca no pase desapercibida</>
+                  <>Haz que tu marca no pase <span className="font-pirata text-[hsl(210,73%,60%)]">desapercibida</span></>
                 )}
               </h1>
               <Button 
@@ -95,7 +95,7 @@ export const Hero = () => {
               {language === 'en' ? 'Strategic Marketing Consulting' : 'Consultoría Estratégica de Marketing'}
             </h3>
             <p className="text-sm text-white/90">
-              {language === 'en' ? 'Expert brand strategy and digital marketing services to position your business effectively' : 'Estrategia de marca experta y servicios de marketing digital para posicionar tu negocio efectivamente'}
+              {language === 'en' ? 'Brand strategy and digital marketing services to position your business effectively' : 'Estrategia de marca y servicios de marketing digital para posicionar tu negocio efectivamente'}
             </p>
           </div>
           
@@ -115,7 +115,7 @@ export const Hero = () => {
               {language === 'en' ? 'Free Marketing Support' : 'Soporte de Marketing Gratuito'}
             </h3>
             <p className="text-sm text-white/90">
-              {language === 'en' ? 'Professional marketing agency services at no cost - helping good businesses succeed' : 'Servicios profesionales de agencia de marketing sin coste - ayudando a buenos negocios a tener éxito'}
+              {language === 'en' ? 'Marketing agency services at no cost - helping good businesses succeed' : 'Servicios de agencia de marketing sin coste - ayudando a buenos negocios a tener éxito'}
             </p>
           </div>
         </div>

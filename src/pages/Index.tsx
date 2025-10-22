@@ -4,6 +4,7 @@ import { WhoAreWe } from "@/components/WhoAreWe";
 import { WhyFree } from "@/components/WhyFree";
 import { WhatWeDo } from "@/components/WhatWeDo";
 import { HowItWorks } from "@/components/HowItWorks";
+import { Reviews } from "@/components/Reviews";
 import { LinkedInPanel } from "@/components/LinkedInPanel";
 import { ContactForm } from "@/components/ContactForm";
 import { Disclaimer } from "@/components/Disclaimer";
@@ -19,6 +20,7 @@ const Index = () => {
       <WhyFree />
       <WhatWeDo />
       <HowItWorks />
+      <Reviews />
       <LinkedInPanel />
       <ContactForm />
       <Disclaimer />

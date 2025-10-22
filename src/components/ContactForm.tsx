@@ -4,6 +4,7 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
 
 export const ContactForm = () => {
   const { t } = useLanguage();
@@ -22,18 +23,22 @@ export const ContactForm = () => {
     setIsSubmitting(true);
 
     try {
-      // Construct mailto link with form data
-      const subject = encodeURIComponent(`BGB Help Request from ${formData.businessName}`);
-      const body = encodeURIComponent(
-        `Business Name: ${formData.businessName}\n` +
-        `Contact Person: ${formData.contactPerson}\n` +
-        `Email: ${formData.contactEmail}\n` +
-        `Website: ${formData.website || 'N/A'}\n\n` +
-        `What they need help with:\n${formData.helpNeeded}`
-      );
-      
-      // Open mailto link
-      window.location.href = `mailto:agjsuarez@gmail.com?subject=${subject}&body=${body}`;
+      // Insert into Supabase
+      const { error } = await supabase
+        .from('contact_submissions')
+        .insert([
+          {
+            business_name: formData.businessName,
+            full_name: formData.contactPerson,
+            email: formData.contactEmail,
+            website_social: formData.website || null,
+            message: formData.helpNeeded,
+          }
+        ]);
+
+      if (error) {
+        throw error;
+      }
       
       // Show success message
       setSubmitted(true);
@@ -50,7 +55,8 @@ export const ContactForm = () => {
       
       setTimeout(() => setSubmitted(false), 5000);
     } catch (error) {
-      toast.error("Something went wrong. Please try again.");
+      console.error('Error submitting form:', error);
+      toast.error(t('errorMessage'));
     } finally {
       setIsSubmitting(false);
     }

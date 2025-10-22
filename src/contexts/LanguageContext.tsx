@@ -16,18 +16,21 @@ const translations = {
     ctaButton: "Request help",
     ctaBadge: "No contracts • No fees",
     
+    // Reviews Section
+    reviewsTitle: "people we helped",
+    
     // Who Are We
     whoAreWeTitle: "Who are we",
-    whoAreWeText: "Bad Good Better Agency is a marketing collective of young professionals from branding, digital marketing, and creative strategy who believe small businesses deserve professional marketing services without the agency fees. We offer free brand consulting, marketing strategy, and digital positioning to help businesses grow. Our marketing experts combine analytical thinking with creative solutions for brand development, content marketing, and business positioning. No jargon. No fees. Just honest marketing strategy made accessible.",
+    whoAreWeText: "Bad Good Better Agency is a marketing collective of young professionals from branding, digital marketing, and creative strategy who believe small businesses deserve accessible marketing services without the agency fees. We offer free brand consulting, marketing strategy, and digital positioning to help businesses grow. Our team combines analytical thinking with creative solutions for brand development, content marketing, and business positioning. No jargon. No fees. Just honest marketing strategy made accessible.",
     
     // Why Free
     whyFreeTitle: "Why Free Marketing Services?",
-    whyFreeText: "Bad Good Better Agency believes that poor marketing destroys good businesses. Too many small businesses can't afford professional marketing agencies or brand consultants, yet need strategic marketing guidance to compete. We provide free marketing consulting, brand strategy, and digital marketing support because we believe great businesses deserve great marketing. No contracts, no hidden fees, no catch. Professional marketing services should be accessible to all businesses ready to grow.",
+    whyFreeText: "Bad Good Better Agency believes that poor marketing destroys good businesses. Too many small businesses can't afford marketing agencies or brand consultants, yet need strategic marketing guidance to compete. We provide free marketing consulting, brand strategy, and digital marketing support because we believe great businesses deserve great marketing. No contracts, no hidden fees, no catch. Marketing services should be accessible to all businesses ready to grow.",
     
     // What We Do
     whatWeDoTitle: "What we do",
     service1Title: "Brand Audit & Marketing Analysis",
-    service1Text: "Professional brand diagnosis identifying marketing weaknesses, market positioning opportunities, and strategic growth areas for your business.",
+    service1Text: "Thorough brand diagnosis identifying marketing weaknesses, market positioning opportunities, and strategic growth areas for your business.",
     service2Title: "Marketing Strategy & Brand Positioning",
     service2Text: "Comprehensive marketing plans and brand positioning strategies that differentiate your business in competitive markets through data-driven insights.",
     service3Title: "Digital Marketing Optimization",
@@ -52,7 +55,8 @@ const translations = {
     gdprNote: "We use your data only to process your request. No newsletters, no spam.",
     formNote: "No fees. No spam. Limited slots per month.",
     submitButton: "Send",
-    successMessage: "Thanks! We'll review your request soon.",
+    successMessage: "Thanks — we got your message.",
+    errorMessage: "Something went wrong, try again.",
     
     // Disclaimer
     disclaimerTitle: "Important",
@@ -75,6 +79,9 @@ const translations = {
     heroSubtitle: "Estrategia, posicionamiento y limpieza. Gratis.",
     ctaButton: "Pedir ayuda",
     ctaBadge: "Sin contratos • Sin costes",
+    
+    // Reviews Section
+    reviewsTitle: "gente a la que ayudamos",
     
     // Who Are We
     whoAreWeTitle: "Quiénes somos",
@@ -112,7 +119,8 @@ const translations = {
     gdprNote: "Usamos tus datos únicamente para gestionar tu solicitud. Sin boletines ni spam.",
     formNote: "Sin costes. Sin spam. Plazas limitadas al mes.",
     submitButton: "Enviar",
-    successMessage: "¡Gracias! Revisaremos tu solicitud en breve.",
+    successMessage: "Gracias — recibimos tu mensaje.",
+    errorMessage: "Algo salió mal, inténtalo de nuevo.",
     
     // Disclaimer
     disclaimerTitle: "Importante",
