@@ -18,6 +18,12 @@ const translations = {
     
     // Reviews Section
     reviewsTitle: "people we helped",
+    review1: "The guys at Bad Good Better Agency helped me in record time, not only on the web design with a no-code tool so that I could manage it myself as well, but with the whole marketing side, including segmentation, brand design, products and pricing. It was truly a pleasant experience and it was so helpful that I had to tip them as well.",
+    review1Author: "A. K. – Performance training academy director",
+    review2: "We had trouble with our offering and the seasonality of our business and marketing actions. I met the team at BGBA through a friend and they helped us solve all our problems and simplify and standardize our marketing actions and promotions in basically two sessions. I am very happy with their help.",
+    review2Author: "K.K. - Specialty supermarket",
+    review3: "I had an idea of what I wanted for the start of my business but counting with the expertise of the team at BGB was truly helpful and sped up the process. I am delighted with their help and from time to time they check on me and I ask them stuff too when I need it",
+    review3Author: "M. S. – Tennis academy director",
     
     // Who Are We
     whoAreWeTitle: "About Us",
@@ -82,6 +88,12 @@ const translations = {
     
     // Reviews Section
     reviewsTitle: "gente a la que ayudamos",
+    review1: "Los chicos de Bad Good Better Agency me ayudaron en tiempo récord, no solo con el diseño web con una herramienta no-code para que pudiera gestionarla yo mismo también, sino con todo el lado del marketing, incluyendo segmentación, diseño de marca, productos y precios. Fue realmente una experiencia agradable y fue tan útil que tuve que darles una propina también.",
+    review1Author: "A. K. – Director de academia de entrenamiento de rendimiento",
+    review2: "Teníamos problemas con nuestra oferta y la estacionalidad de nuestro negocio y acciones de marketing. Conocí al equipo de BGBA a través de un amigo y nos ayudaron a resolver todos nuestros problemas y simplificar y estandarizar nuestras acciones de marketing y promociones en básicamente dos sesiones. Estoy muy contento con su ayuda.",
+    review2Author: "K.K. - Supermercado especializado",
+    review3: "Tenía una idea de lo que quería para el inicio de mi negocio pero contar con la experiencia del equipo de BGB fue realmente útil y aceleró el proceso. Estoy encantado con su ayuda y de vez en cuando me consultan y yo también les pregunto cosas cuando lo necesito",
+    review3Author: "M. S. – Director de academia de tenis",
     
     // Who Are We
     whoAreWeTitle: "Sobre Nosotros",
