@@ -14,7 +14,7 @@ export const WhoAreWe = () => {
         <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground">
           {t('whoAreWeTitle')}
         </h2>
-        <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+        <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
           {t('whoAreWeText')}
         </p>
       </div>

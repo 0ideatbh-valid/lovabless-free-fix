@@ -15,7 +15,7 @@ export const Reviews = () => {
       </div>
 
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center text-foreground">
+        <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center text-foreground max-w-md mx-auto">
           {otherWords}{' '}
           <span className="font-pirata text-[hsl(210,73%,60%)]">{lastWord}</span>
         </h2>

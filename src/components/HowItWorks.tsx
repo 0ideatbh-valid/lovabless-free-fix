@@ -58,13 +58,13 @@ export const HowItWorks = () => {
                 {step.number}
               </div>
               <div className="flex items-start gap-2 justify-center md:justify-start">
-                <span 
+                <span
                   className="flex-shrink-0 w-6 h-6 rounded-full text-white flex items-center justify-center font-semibold text-sm"
                   style={{ background: step.color }}
                 >
                   {step.smallNumber}
                 </span>
-                <p className="text-base text-foreground leading-relaxed text-center md:text-left flex-1">
+                <p className="text-base text-foreground leading-relaxed text-center md:text-left flex-1 max-w-[200px] md:max-w-none">
                   {t(step.key)}
                 </p>
               </div>
