@@ -6,7 +6,7 @@ export const LinkedInPanel = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="py-16 px-6 bg-secondary">
+    <section className="py-20 px-6 bg-secondary">
       <div className="max-w-2xl mx-auto">
         <div className="bg-background rounded-2xl p-8 shadow-lg border border-border text-center">
           <div className="flex items-center justify-center gap-3 mb-4">

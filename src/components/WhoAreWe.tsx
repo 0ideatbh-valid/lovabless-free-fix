@@ -4,12 +4,12 @@ export const WhoAreWe = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="py-12 px-6 bg-background scroll-fade-in">
+    <section className="py-20 px-6 bg-background scroll-fade-in">
       {/* Separator line */}
-      <div className="max-w-6xl mx-auto mb-10">
+      <div className="max-w-6xl mx-auto mb-12">
         <div className="h-px bg-border" />
       </div>
-      
+
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground">
           {t('whoAreWeTitle')}

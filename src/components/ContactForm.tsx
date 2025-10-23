@@ -127,9 +127,9 @@ export const ContactForm = () => {
             {t('gdprNote')}
           </p>
 
-          <Button 
-            type="submit" 
-            className="w-full text-lg py-6 rounded-full font-medium"
+          <Button
+            type="submit"
+            className="w-full text-lg py-6 rounded-full font-medium disabled:opacity-50 disabled:cursor-not-allowed"
             disabled={isSubmitting}
           >
             {isSubmitting ? '...' : t('submitButton')}

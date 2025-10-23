@@ -8,9 +8,9 @@ export const Reviews = () => {
   const otherWords = titleWords.slice(0, -1).join(' ');
 
   return (
-    <section className="py-12 px-6 bg-background">
+    <section className="py-20 px-6 bg-background">
       {/* Separator line */}
-      <div className="max-w-6xl mx-auto mb-10">
+      <div className="max-w-6xl mx-auto mb-12">
         <div className="h-px bg-border" />
       </div>
 
